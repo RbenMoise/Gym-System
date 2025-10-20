@@ -1,66 +1,239 @@
-/* Dashboard.css - New styles for dashboard */
+/* Dashboard.css - Updated to match the pricing theme: dark backgrounds, orange accents, modern silky styles */
 .dashboard-page {
-  /* Similar to pricing-page */
+  color: #fff;
+  font-family: "Inter", sans-serif; /* Assuming Inter from theme */
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #ff5722;
 }
 
 .dashboard-hero {
+  min-height: 50vh;
+  background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.9),
+      rgba(40, 30, 20, 0.8)
+    ),
+    url("https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1920")
+      center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 4rem 0;
-  background: linear-gradient(to right, #007bff, #0056b3);
-  color: white;
+  padding: 8rem 2rem 4rem;
+}
+
+.dashboard-hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.dashboard-hero p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.plan-summary {
+  padding: 6rem 0;
+  background-color: #1a1a1a;
 }
 
 .plan-card-dashboard {
-  background: white;
-  color: black;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  background-color: #0f0f0f;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  max-width: 500px;
   margin: 0 auto;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.plan-card-dashboard:hover {
+  transform: translateY(-5px);
+  border-color: #ff5722;
+  box-shadow: 0 15px 40px rgba(255, 87, 34, 0.2);
+}
+
+.plan-name {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.plan-price {
+  margin-bottom: 2rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  color: #ff5722;
+  vertical-align: super;
+}
+
+.amount {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.period {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.plan-features li {
+  padding: 0.75rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.check {
+  color: #ff5722;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.registration-info {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.registration-info p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.btn-manage {
+  width: 100%;
+  background-color: transparent;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-manage:hover {
+  background-color: #ff5722;
+  color: white;
+  transform: translateY(-2px);
 }
 
 .quick-actions {
-  padding: 4rem 0;
+  padding: 6rem 0;
+  background-color: #0f0f0f;
+}
+
+.quick-actions h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
 }
 
 .actions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .action-card {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 8px;
+  background-color: #1a1a1a;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-.action-card button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+.action-card:hover {
+  border-color: #ff5722;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 87, 34, 0.2);
+}
+
+.action-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.action-card p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-action {
+  background-color: transparent;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn-manage {
-  background: #28a745;
+.btn-action:hover {
+  background-color: #ff5722;
   color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 1rem;
+  transform: translateY(-2px);
 }
 
-/* Container class for consistency */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+@media (max-width: 768px) {
+  .dashboard-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .dashboard-hero p {
+    font-size: 1.2rem;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card-dashboard {
+    padding: 2rem 1.5rem;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
 }

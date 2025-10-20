@@ -1,6 +1,6 @@
-// pages/Dashboard.js - New component for user's plan page
+// pages/Dashboard.js - Updated to match the dark orange theme
 import React, { useState, useEffect } from "react";
-import "./Dashboard.css"; // Assume CSS file
+import "./Dashboard.css";
 
 function Dashboard() {
   const [userData, setUserData] = useState(null);
@@ -16,20 +16,22 @@ function Dashboard() {
   }, []);
 
   if (!userData) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading your dashboard...</div>;
   }
 
   return (
     <div className="dashboard-page">
       <section className="dashboard-hero">
-        <h1>Welcome, {userData.name}!</h1>
-        <p>Your {userData.plan.name} Membership Dashboard</p>
+        <div className="container">
+          <h1>Welcome Back, {userData.name}!</h1>
+          <p>Your {userData.plan.name} Membership Dashboard</p>
+        </div>
       </section>
 
       <section className="plan-summary">
         <div className="container">
           <div className="plan-card-dashboard">
-            <h3>{userData.plan.name} Plan</h3>
+            <h3 className="plan-name">{userData.plan.name} Plan</h3>
             <div className="plan-price">
               <span className="currency">$</span>
               <span className="amount">{userData.plan.price}</span>
@@ -61,15 +63,18 @@ function Dashboard() {
           <div className="actions-grid">
             <div className="action-card">
               <h4>Book a Class</h4>
-              <button>View Schedule</button>
+              <p>Reserve your spot in upcoming sessions</p>
+              <button className="btn-action">View Schedule</button>
             </div>
             <div className="action-card">
               <h4>Track Progress</h4>
-              <button>View Stats</button>
+              <p>Monitor your fitness journey and goals</p>
+              <button className="btn-action">View Stats</button>
             </div>
             <div className="action-card">
               <h4>Contact Trainer</h4>
-              <button>Message</button>
+              <p>Get personalized advice from experts</p>
+              <button className="btn-action">Message Trainer</button>
             </div>
           </div>
         </div>
