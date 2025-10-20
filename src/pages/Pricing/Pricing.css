@@ -1,0 +1,372 @@
+.pricing-page {
+  color: #fff;
+}
+
+.pricing-hero {
+  min-height: 50vh;
+  background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.9),
+      rgba(40, 30, 20, 0.8)
+    ),
+    url("https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=1920")
+      center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.pricing-hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.pricing-hero p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-plans {
+  padding: 6rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.plan-card {
+  background-color: #0f0f0f;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff5722;
+  box-shadow: 0 15px 40px rgba(255, 87, 34, 0.2);
+}
+
+.plan-card.popular {
+  border-color: #ff5722;
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+.plan-card.popular:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.plan-name {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.plan-price {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  color: #ff5722;
+  vertical-align: super;
+}
+
+.amount {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.period {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+}
+
+.plan-features li {
+  padding: 0.75rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.check {
+  color: #ff5722;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.btn-select {
+  width: 100%;
+  background-color: transparent;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-select:hover {
+  background-color: #ff5722;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-select-popular {
+  background-color: #ff5722;
+  color: white;
+}
+
+.btn-select-popular:hover {
+  background-color: #e64a19;
+}
+
+.addons-section {
+  padding: 6rem 2rem;
+  background-color: #0f0f0f;
+}
+
+.addons-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.addons-intro {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.addon-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.addon-card:hover {
+  border-color: #ff5722;
+  transform: translateY(-5px);
+}
+
+.addon-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.addon-price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff5722;
+  margin-bottom: 1.5rem;
+}
+
+.btn-add {
+  background-color: transparent;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #ff5722;
+  color: white;
+}
+
+.trial-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 87, 34, 0.1),
+    rgba(255, 152, 0, 0.1)
+  );
+  background-color: #1a1a1a;
+}
+
+.trial-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.trial-content h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.trial-content p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.btn-trial-large {
+  background-color: #ff5722;
+  color: white;
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-trial-large:hover {
+  background-color: #e64a19;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 87, 34, 0.4);
+}
+
+.faq-section {
+  padding: 6rem 2rem;
+  background-color: #0f0f0f;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.faq-item {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #ff5722;
+  transform: translateY(-5px);
+}
+
+.faq-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.faq-item p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.cta-pricing {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  text-align: center;
+}
+
+.cta-pricing h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.cta-pricing p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-join {
+  background-color: #fff;
+  color: #ff5722;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-join:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .pricing-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card.popular {
+    transform: scale(1);
+  }
+
+  .plan-card.popular:hover {
+    transform: translateY(-10px);
+  }
+}

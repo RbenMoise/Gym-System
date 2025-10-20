@@ -1,0 +1,270 @@
+.trainers-page {
+  color: #fff;
+}
+
+.trainers-hero {
+  min-height: 50vh;
+  background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.9),
+      rgba(40, 30, 20, 0.8)
+    ),
+    url("https://images.pexels.com/photos/1092877/pexels-photo-1092877.jpeg?auto=compress&cs=tinysrgb&w=1920")
+      center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.trainers-hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.trainers-hero p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.trainers-intro {
+  padding: 6rem 2rem;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trainers-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trainers-list {
+  padding: 4rem 2rem 6rem;
+  background-color: #1a1a1a;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.trainer-card {
+  background-color: #0f0f0f;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff5722;
+  box-shadow: 0 15px 40px rgba(255, 87, 34, 0.2);
+}
+
+.trainer-image {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.trainer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trainer-card:hover .trainer-image img {
+  transform: scale(1.1);
+}
+
+.trainer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.trainer-card:hover .trainer-overlay {
+  opacity: 1;
+}
+
+.btn-contact {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+.trainer-info {
+  padding: 2rem;
+}
+
+.trainer-info h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.specialty {
+  color: #ff5722;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cert-badge {
+  background-color: rgba(255, 87, 34, 0.2);
+  color: #ff5722;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.trainer-benefits {
+  padding: 6rem 2rem;
+  background-color: #0f0f0f;
+}
+
+.trainer-benefits h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff5722;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.benefit-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.cta-trainers {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  text-align: center;
+}
+
+.cta-trainers h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.cta-trainers p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-schedule {
+  background-color: #fff;
+  color: #ff5722;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-schedule:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .trainers-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,283 @@
+.classes-page {
+  color: #fff;
+}
+
+.classes-hero {
+  min-height: 50vh;
+  background: linear-gradient(
+      135deg,
+      rgba(20, 20, 20, 0.9),
+      rgba(40, 30, 20, 0.8)
+    ),
+    url("https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=1920")
+      center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+}
+
+.classes-hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.classes-hero p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.class-types {
+  padding: 6rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.class-types h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.type-card {
+  background-color: #0f0f0f;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.type-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff5722;
+  box-shadow: 0 10px 30px rgba(255, 87, 34, 0.2);
+}
+
+.type-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.type-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.type-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.schedule-section {
+  padding: 6rem 2rem;
+  background-color: #0f0f0f;
+}
+
+.schedule-section h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.day-btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.day-btn:hover {
+  border-color: #ff5722;
+  background-color: rgba(255, 87, 34, 0.1);
+}
+
+.day-btn.active {
+  background-color: #ff5722;
+  border-color: #ff5722;
+  color: white;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.schedule-item {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+  border-color: #ff5722;
+  transform: translateX(10px);
+}
+
+.schedule-time {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ff5722;
+}
+
+.schedule-details h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.schedule-details p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.schedule-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.duration {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.level {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.level-beginner {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.level-intermediate {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.level-advanced {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.level-all-levels {
+  background-color: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+}
+
+.btn-book {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-book:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.4);
+}
+
+.class-benefits {
+  padding: 6rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.class-benefits h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit {
+  text-align: center;
+  padding: 2rem;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.benefit p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .classes-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .schedule-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .day-selector {
+    gap: 0.5rem;
+  }
+
+  .day-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
