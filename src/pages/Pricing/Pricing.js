@@ -1,6 +1,15 @@
+// pages/Pricing.js - Updated with state management, registration modal, and plan selection logic
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Pricing.css";
 
 function Pricing() {
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+  const [userInfo, setUserInfo] = useState({ name: "", email: "", phone: "" });
+  const [showSuccess, setShowSuccess] = useState(false);
+  const navigate = useNavigate();
+
   const plans = [
     {
       name: "Basic",
@@ -56,6 +65,36 @@ function Pricing() {
     { name: "Towel Service (monthly)", price: "15" },
   ];
 
+  const handlePlanSelect = (plan) => {
+    setSelectedPlan(plan);
+    setShowRegistrationModal(true);
+  };
+
+  const handleInputChange = (e) => {
+    setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
+  };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    if (userInfo.name && userInfo.email && userInfo.phone) {
+      // Simulate registration - store in localStorage for persistence
+      const userData = {
+        ...userInfo,
+        plan: selectedPlan,
+        registrationDate: new Date().toISOString(),
+      };
+      localStorage.setItem("gymUser", JSON.stringify(userData));
+      setShowRegistrationModal(false);
+      setShowSuccess(true);
+
+      // Auto-redirect to dashboard after 2 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+        navigate("/dashboard");
+      }, 2000);
+    }
+  };
+
   return (
     <div className="pricing-page">
       <section className="pricing-hero">
@@ -69,7 +108,9 @@ function Pricing() {
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className={`plan-card ${plan.popular ? "popular" : ""}`}
+                className={`plan-card ${plan.popular ? "popular" : ""} ${
+                  selectedPlan?.name === plan.name ? "selected" : ""
+                }`}
               >
                 {plan.popular && (
                   <div className="popular-badge">Most Popular</div>
@@ -88,11 +129,15 @@ function Pricing() {
                   ))}
                 </ul>
                 <button
+                  onClick={() => handlePlanSelect(plan)}
                   className={`btn-select ${
                     plan.popular ? "btn-select-popular" : ""
                   }`}
+                  disabled={selectedPlan?.name === plan.name}
                 >
-                  Select Plan
+                  {selectedPlan?.name === plan.name
+                    ? "Selected"
+                    : "Select Plan"}
                 </button>
               </div>
             ))}
@@ -185,6 +230,64 @@ function Pricing() {
           <button className="btn-join">Join Now</button>
         </div>
       </section>
+
+      {/* Registration Modal */}
+      {showRegistrationModal && selectedPlan && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h3>Complete Your Registration for {selectedPlan.name} Plan</h3>
+            <form onSubmit={handleRegister}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={userInfo.name}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={userInfo.email}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={userInfo.phone}
+                onChange={handleInputChange}
+                required
+              />
+              <button type="submit" className="btn-register">
+                Register & Join
+              </button>
+            </form>
+            <button
+              onClick={() => setShowRegistrationModal(false)}
+              className="btn-cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Success Message */}
+      {showSuccess && (
+        <div className="success-overlay">
+          <div className="success-content">
+            <h3>Success!</h3>
+            <p>
+              You've been registered for the {selectedPlan?.name} plan. Welcome
+              to the gym!
+            </p>
+            <p>Redirecting to your dashboard...</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
